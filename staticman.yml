@@ -1,0 +1,34 @@
+# staticman.yml
+# Configuration for the "wishes" property
+wishes:
+  # Fields the form is allowed to submit
+  allowedFields: ["name", "wish"]
+
+  # Branch where files will be committed
+  branch: "main"
+
+  # Commit message template
+  commitMessage: "🎂 New birthday wish from {fields.name}"
+
+  # Filename pattern — each wish gets a unique file
+  filename: "wish-{@date:yyyy-MM-dd-HH-mm-ss}-{fields.name}"
+
+  # File format: json, yaml, or frontmatter
+  format: "json"
+
+  # Set to true to require PR approval before publishing
+  moderation: false
+
+  # Destination folder inside the repo
+  path: "wishes"
+
+  # Fields that must be present in every submission
+  requiredFields: ["name", "wish"]
+
+  # Automatically generated fields
+  generatedFields:
+    date:
+      type: date
+
+  # Optional: restrict origins
+  # allowedOrigins: ["your-username.github.io"]
